@@ -63,7 +63,7 @@ Backend API for a video hosting platform (YouTube-style project) built using Nod
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/videotube-backend.git
+git clone https://github.com/hashirkhaaan/videotube-backend.git
 cd videotube-backend
 ```
 
@@ -82,15 +82,18 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
+# Server Configuration
 PORT=8000
-MONGODB_URI=mongodb+srv://<your-connection-string>
-CORS_ORIGIN=http://localhost:3000
+MONGODB_URI=your-mongodb-uri
+CORS_ORIGIN=*
 
-ACCESS_TOKEN_SECRET=your-access-secret
+# JWT Secrets (Use long random strings)
+ACCESS_TOKEN_SECRET=any-random-secret-key
 ACCESS_TOKEN_EXPIRY=1d
-REFRESH_TOKEN_SECRET=your-refresh-secret
+REFRESH_TOKEN_SECRET=any-random-refresh-key
 REFRESH_TOKEN_EXPIRY=10d
 
+# Cloudinary Configuration
 CLOUDINARY_CLOUD_NAME=your-cloud-name
 CLOUDINARY_API_KEY=your-api-key
 CLOUDINARY_API_SECRET=your-api-secret
